@@ -4,6 +4,7 @@
      <xs:element name="films_Warkraft" type="xs:string"/>
      <xs:element name="Series_Naruto" type="xs:string"/>
      <xs:element name="Citi_Rostov-on-Don" type="xs:string"/>
+   
    </xs:sequence>
    </xs:complexType>
 </xs:element>
