@@ -488,7 +488,7 @@
 					]
 				},
 				{
-					"name": "Correct request",
+					"name": "1_test",
 					"event": [
 						{
 							"listen": "test",
@@ -530,7 +530,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "2_test",
 					"event": [
 						{
 							"listen": "test",
@@ -538,7 +538,35 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
-									"});"
+									"});",
+									"",
+									"let responseBady = pm.response.json();      // Спарсить response body в json.",
+									"var requestBady = request.data;",
+									"let req_salary = +requestBady.salary        //Спарсить request.",
+									"let req_age = requestBady.age",
+									"let u_salary_1_5_year = +responseBady.u_salary_1_5_year",
+									"",
+									"",
+									"pm.test(\"name\", function () {  // Проверить, что name в ответе равно name s request (name вбить руками.)",
+									"    pm.expect(pm.response.text()).to.include(\"name\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"age\", function () {    //Проверить, что age в ответе равно age s request (age вбить руками.)   ",
+									"    pm.expect(responseBady.age).to.eql(req_age);",
+									"}); ",
+									"",
+									"",
+									"pm.test(\"salary\", function () {    //Проверить, что salary в ответе равно salary s request (salary вбить руками.)",
+									"    pm.expect(responseBady.salary).to.eql(req_salary);",
+									"}); ",
+									"",
+									"",
+									"",
+									"console.log(\"family = \" + responseBady.family)   //11. Вывести в консоль параметр family из response.",
+									"",
+									"",
+									"console.log(typeof(req_salary) + \" == \" + u_salary_1_5_year) //12.Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)"
 								],
 								"type": "text/javascript"
 							}
