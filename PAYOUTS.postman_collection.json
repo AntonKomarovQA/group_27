@@ -1,0 +1,2114 @@
+{
+	"info": {
+		"_postman_id": "972f10fe-9c09-482c-992f-de163cf0dd73",
+		"name": "PAYOUTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18156060"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "customers/agreement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/agreement",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"agreement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/agreement/1/accept Принятия_лицензионого_соглашения",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/agreement/1/accept",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"agreement",
+								"1",
+								"accept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/legal/kyc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/legal/kyc",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"legal",
+								"kyc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/legal/tax_interview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/legal/tax_interview",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"legal",
+								"tax_interview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/settings",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "customers/services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/services/configurations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services/configurations",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services",
+								"configurations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/services/configurations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"service_id\":\"b96efecf-3eed-4a61-9307-44202520622c\",\r\n\"is_default\":false,\r\n\"fields\": {\r\n     \"pan\": \"JwTtc4IPMohojQC/ThMbtYvYFMKA9nKZ+4nHCL6nMPXFSJL+PTfGog3lZlSTGBWPGJSFM5hm+15zoecNU5dsGynvWQ4un8zjp/zKCebobbdt2AiRvaPOiMFSTBPHmjSnR9cv7DmQB12/8UpO9aglnQc6Zdlox5iy97ruBkuOIdwfW8GfDZVbkK/QS+1TDcEHyMJIgEZ87YGq7qbQWzweNfbnwg5JQjtZCGyXJG9bWBzy56e+Jc0sxNeKtEFk+qRP3x2LSA8tcz2WC4yzkfp8kTjwyzzrLUZf18R7Vyg1vxQYXubfQ8orLYOWjaEkQuSDd50HjT6ORNj840ZEumfxcw==\",\r\n     \"recipient_full_name\": \"Anton Anton123\",\r\n     \"recipient_beneficiary_id\": \"Komarov1235\",\r\n     \"first_name\":\"First\",\r\n     \"last_name\":\"Last\",\r\n     \"middle_name\":\"Midle\"\r\n           }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services/configurations",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services",
+								"configurations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/services/configurations/configurations_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "configuration_id",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services/configurations/181",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services",
+								"configurations",
+								"181"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/services/configurations/configurations_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldA==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"service_id\":\"b96efecf-3eed-4a61-9307-44202520622c\",\r\n\"is_default\":false,\r\n\"fields\": {\r\n     \"pan\": \"605db62692d4db16f2861954d73c9e14a2eed2a3\",\r\n     \"recipient_full_name\": \"Anton\",\r\n     \"recipient_beneficiary_id\": \"Kot\",\r\n    \"first_name\":\"Anton\",\r\n     \"last_name\": \"Komarov\",\r\n    \"middle_name\":\"Igorevich\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services/configurations/181",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services",
+								"configurations",
+								"181"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/services/configurations/configurations_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services/configurations/265",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services",
+								"configurations",
+								"265"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/services/groups",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "configuration_id",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services/groups",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/services/group/{group_id}/country/{country_id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "configuration_id",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/services/groups/1/country/USA",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"services",
+								"groups",
+								"1",
+								"country",
+								"USA"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payout",
+			"item": [
+				{
+					"name": "customers/transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/transactions?type=hold",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "hold"
+								},
+								{
+									"key": "max_count",
+									"value": "9",
+									"disabled": true
+								},
+								{
+									"key": "created_at_from",
+									"value": "2022-06-12T00:00:00-05:00",
+									"disabled": true
+								},
+								{
+									"key": "created_at_to",
+									"value": "2022-08-02T16:41:18-05:00",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/transactions/calc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\":200,\r\n  \"configuration\": {\r\n    \"additionalProp1\":\"4000000000000002\",\r\n    \"additionalProp2\":\"Kot1\",\r\n    \"additionalProp3\":\"enot1\"\r\n  } ,\r\n  \"configuration_id\":265,\r\n  \"currency\":\"USD\",\r\n  \"locale\":\"ru_RU\",\r\n  \"order_id\":\"s\",\r\n  \"service_id\":\"b96efecf-3eed-4a61-9307-44202520622c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/transactions/calc",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"transactions",
+								"calc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customers/transactions/credits",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/transactions/credits",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"transactions",
+								"credits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customers/transactions/payouts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/transactions/credits",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"transactions",
+								"credits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers/transactions/payouts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 100,\r\n  \"configuration_id\": 181,\r\n  \"currency\": \"USD\",\r\n  \"locale\": \"ru_RU\",\r\n  \"service_id\": \"b96efecf-3eed-4a61-9307-44202520622c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/customers/transactions/payouts",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"transactions",
+								"payouts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "merchan",
+			"item": [
+				{
+					"name": "merchants/customer/auth - Получение Токена",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldA==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"kotEnot@rambler.com\",\r\n  \"name\": \"Enot Kot\",\r\n  \"phone\":\"+16000000000255\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/auth",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Обновление баланса_merchants/customer/balance",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"kotEnot@rambler.com\",\r\n  \"id\": \"18\",\r\n  \"amount\": 100.5,\r\n  \"currency\": \"USD\",\r\n  \"details\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/balance",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "merchants/customer/balance/transaction/block",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\":\"18\",\r\n  \"email\": \"kotEnot@rambler.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/balance/transaction/block",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"balance",
+								"transaction",
+								"block"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "merchants/customer/balance/transaction/unblock",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\":\"18\",\r\n  \"email\": \"kotEnot@rambler.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/balance/transaction/unblock",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"balance",
+								"transaction",
+								"unblock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "merchants/customer/block",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"kotEnot@rambler.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/block",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"block"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "merchants/customer/unblock",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"kotEnot@rambler.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/unblock",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"unblock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{merchant_id}/project/{project_id}/merchants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenMer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/publisher_account/merchant/68459/project/37377/merchants",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"publisher_account",
+								"merchant",
+								"68459",
+								"project",
+								"37377",
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{merchant_id}/project/{project_id}/merchants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenMer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company_name\": \"Anton\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/publisher_account/merchant/68459/project/13/merchants",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"publisher_account",
+								"merchant",
+								"68459",
+								"project",
+								"13",
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{merchant_id}/project/{project_id}/merchants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenMer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{Url}}/api/v1/publisher_account/merchant/272848/project/1/merchants",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"publisher_account",
+								"merchant",
+								"272848",
+								"project",
+								"1",
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "project/{project_id}/merchants/balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenMer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/publisher_account/merchant/272848/project/1/merchants/balance",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"publisher_account",
+								"merchant",
+								"272848",
+								"project",
+								"1",
+								"merchants",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "project/{project_id}/transactions/payouts/export ТЕСТ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenMer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/publisher_account/merchant/2340/project/35795/transactions/payouts/export?created_at_from=2022-06-12T00:00:00-05:00&created_at_to=2022-06-12T23:59:59Z&status=new&status=in_progress&search=kotEnot@rambler.com",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"publisher_account",
+								"merchant",
+								"2340",
+								"project",
+								"35795",
+								"transactions",
+								"payouts",
+								"export"
+							],
+							"query": [
+								{
+									"key": "created_at_from",
+									"value": "2022-06-12T00:00:00-05:00"
+								},
+								{
+									"key": "created_at_to",
+									"value": "2022-06-12T23:59:59Z"
+								},
+								{
+									"key": "status",
+									"value": "new"
+								},
+								{
+									"key": "status",
+									"value": "in_progress"
+								},
+								{
+									"key": "search",
+									"value": "kotEnot@rambler.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/project/1/transactions/payouts/download/{file_name} ТЕСТ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenMer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/publisher_account/merchant/272848/project/1/transactions/payouts/download/",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"publisher_account",
+								"merchant",
+								"272848",
+								"project",
+								"1",
+								"transactions",
+								"payouts",
+								"download",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "merchant/272848/project/1/transactions/payouts/export ТЕСТ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenMer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/api/v1/publisher_account/merchant/272848/project/1/transactions/payouts/export",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"publisher_account",
+								"merchant",
+								"272848",
+								"project",
+								"1",
+								"transactions",
+								"payouts",
+								"export"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token test",
+			"item": [
+				{
+					"name": "Prod",
+					"item": [
+						{
+							"name": "d.sinichkin+03@",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "Bz3&W!GcUzTKmM#onGNFSr@clxW7ZK*V7FIA",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "6202b001-3f47-4c7d-b887-c663930be7c4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Dmitriy Sinichkin\",\r\n    \"email\": \"d.sinichkin+03@xsolla.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://payouts-api.xsolla.com/api/v1/merchants/customer/auth",
+									"protocol": "https",
+									"host": [
+										"payouts-api",
+										"xsolla",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Anton",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "6202b001-3f47-4c7d-b887-c663930be7c4",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "Bz3&W!GcUzTKmM#onGNFSr@clxW7ZK*V7FIA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Anton\",\r\n    \"email\": \"komarovfirecod@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://payouts-api.xsolla.com/api/v1/merchants/customer/auth",
+									"protocol": "https",
+									"host": [
+										"payouts-api",
+										"xsolla",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Denis",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "6202b001-3f47-4c7d-b887-c663930be7c4",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "Bz3&W!GcUzTKmM#onGNFSr@clxW7ZK*V7FIA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Denis\",\r\n    \"email\": \"wofibal982@safe-cart.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://payouts-api.xsolla.com/api/v1/merchants/customer/auth",
+									"protocol": "https",
+									"host": [
+										"payouts-api",
+										"xsolla",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Stage",
+					"item": [
+						{
+							"name": "Belka",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Belka\",\r\n    \"email\": \"kotEnotBelka@rambler.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kot123Krab",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Kot123Krab\",\r\n    \"email\": \"Kot123@xsolla.ru\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kot123Krabov1231231231232131312",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Kot123Krabov1231231231232131312\",\r\n    \"email\": \"Kot@xsolla.ru\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Дима Клем- d.sinichkin1@gmail.com",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Dmitriy Sinichkin\",\r\n    \"email\": \"d.sinichkin1@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Артем- d.sinichkin1@gmail.com",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Dmitriy Sinichkin\",\r\n    \"email\": \"ddd.sinichkin@xsolla.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Dmitriy Sinichkin@xsolla.com",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"connection": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Dmitriy Sinichkin\",\r\n    \"email\": \"d.sinichkin@xsolla.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EnotKot",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Enot Kot\",\r\n    \"email\": \"kotEnot@rambler.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"test@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Maria Kirkor",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Maria Kirkor\",\r\n    \"email\": \"m.kirkor@xsolla.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Anton",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Anton \",\r\n    \"email\": \"antontest1@rambler.ru\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Url}}/api/v1/merchants/customer/auth",
+									"host": [
+										"{{Url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchants",
+										"customer",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "dw.sinichk",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dmitriy Sinichkin\",\r\n    \"email\": \"dw.sinichkin@xsolla.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/auth",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "d.sinichkin@xso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTFlODk5ODEtNTczMy00OWYwLWJkMTItZGNjZGZmMzQxOWRlOnNlY3JldF9zZWNyZXRfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dmitriy Sinichkin\",\r\n    \"email\": \"d.sinichkin@xsolla.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/merchants/customer/auth",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchants",
+								"customer",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://payouts-api.xsolla.com/?theme=black&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjJjN2IxNmM4LTM2YjktNDNlZi05ODA0LWM3MmJkZTQyNzA4NyIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImV4cCI6MTY1OTUzNzA1OSwiZXh0ZXJuYWxfYWNjb3VudF9pZCI6ImRhYzRhZjNlLWFjZDItNDQ0Ny04NjJmLTkzZDAzMmJhMTIxMyIsImdyb3VwcyI6W3siaWQiOjMzNTQxLCJuYW1lIjoiZGVmYXVsdCIsImlzX2RlZmF1bHQiOnRydWV9XSwiaWF0IjoxNjU5NDUwNjU5LCJpc3MiOiJodHRwczovL2xvZ2luLnhzb2xsYS5jb20iLCJwcm9tb19lbWFpbF9hZ3JlZW1lbnQiOmZhbHNlLCJwdWJsaXNoZXJfaWQiOjE2Mjc3Niwic2VydmVyX2N1c3RvbV9pZCI6ImRhYzRhZjNlLWFjZDItNDQ0Ny04NjJmLTkzZDAzMmJhMTIxMyIsInN1YiI6ImYxMzRmMmMyLWVjMGUtNDNkNi04NzE1LTFjODhkOTEwNzUwMSIsInR5cGUiOiJzZXJ2ZXJfY3VzdG9tX2lkIiwidXNlcm5hbWUiOm51bGwsInhzb2xsYV9sb2dpbl9hY2Nlc3Nfa2V5IjoiTlJBTzRkSG9rRHhRTWpGRnpUUjV4dU1SUWFEMFlaTVZZR040TXdQVDRGMCIsInhzb2xsYV9sb2dpbl9wcm9qZWN0X2lkIjoiMTAxZDE0YmUtMGNhMi0xMWVkLTk0ZDAtNDIwMTBhYTgwMDA0In0.JkiIkjWLUHzn5O8ZoDVq8w8_O7RGmdKX5AJRqQezUAoNXeZ3mO4y3jHEeOsWRJ3Wf4t-h-7XHn4HO_U5eD5RUU3raR9VbDE1hKFxrKdMa8Zt2Y71jrMadyhFyRDDUaeE42jo6wKoolSQBTA2IAQDXTLGcpnKlvTEfWjMPFgsYddt6tFjFUqYEDk-cMbFvgKIM-oI1ncOvq5jQZRvwdWVhTELhhtQXvxcnQg-BgC_1gawKCkfdVJGImE0Vaz3LgzVdDRkAio0ZrcpCe6Bx1-O-RYWMEU_gZ6w_uXFUfu-It2B2m3oJAyqVs4mTarxk1DWX1fNpMSJyEcg3rCrkoA1Mg",
+							"protocol": "https",
+							"host": [
+								"payouts-api",
+								"xsolla",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "theme",
+									"value": "black"
+								},
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJjN2IxNmM4LTM2YjktNDNlZi05ODA0LWM3MmJkZTQyNzA4NyIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImV4cCI6MTY1OTUzNzA1OSwiZXh0ZXJuYWxfYWNjb3VudF9pZCI6ImRhYzRhZjNlLWFjZDItNDQ0Ny04NjJmLTkzZDAzMmJhMTIxMyIsImdyb3VwcyI6W3siaWQiOjMzNTQxLCJuYW1lIjoiZGVmYXVsdCIsImlzX2RlZmF1bHQiOnRydWV9XSwiaWF0IjoxNjU5NDUwNjU5LCJpc3MiOiJodHRwczovL2xvZ2luLnhzb2xsYS5jb20iLCJwcm9tb19lbWFpbF9hZ3JlZW1lbnQiOmZhbHNlLCJwdWJsaXNoZXJfaWQiOjE2Mjc3Niwic2VydmVyX2N1c3RvbV9pZCI6ImRhYzRhZjNlLWFjZDItNDQ0Ny04NjJmLTkzZDAzMmJhMTIxMyIsInN1YiI6ImYxMzRmMmMyLWVjMGUtNDNkNi04NzE1LTFjODhkOTEwNzUwMSIsInR5cGUiOiJzZXJ2ZXJfY3VzdG9tX2lkIiwidXNlcm5hbWUiOm51bGwsInhzb2xsYV9sb2dpbl9hY2Nlc3Nfa2V5IjoiTlJBTzRkSG9rRHhRTWpGRnpUUjV4dU1SUWFEMFlaTVZZR040TXdQVDRGMCIsInhzb2xsYV9sb2dpbl9wcm9qZWN0X2lkIjoiMTAxZDE0YmUtMGNhMi0xMWVkLTk0ZDAtNDIwMTBhYTgwMDA0In0.JkiIkjWLUHzn5O8ZoDVq8w8_O7RGmdKX5AJRqQezUAoNXeZ3mO4y3jHEeOsWRJ3Wf4t-h-7XHn4HO_U5eD5RUU3raR9VbDE1hKFxrKdMa8Zt2Y71jrMadyhFyRDDUaeE42jo6wKoolSQBTA2IAQDXTLGcpnKlvTEfWjMPFgsYddt6tFjFUqYEDk-cMbFvgKIM-oI1ncOvq5jQZRvwdWVhTELhhtQXvxcnQg-BgC_1gawKCkfdVJGImE0Vaz3LgzVdDRkAio0ZrcpCe6Bx1-O-RYWMEU_gZ6w_uXFUfu-It2B2m3oJAyqVs4mTarxk1DWX1fNpMSJyEcg3rCrkoA1Mg"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SumSub Webhook",
+			"item": [
+				{
+					"name": "Webhook in_progress",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-payload-digest",
+								"value": "4725d3e3bdf7a11b40d56225fbde25bc85858635",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\":\"applicantPending\",\"reviewStatus\":\"pending\",\"externalUserId\":\"fb122e1b-98cf-42f2-b5c5-34f7c863d692\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/webhooks/sumsub",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"webhooks",
+								"sumsub"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook Completed",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-payload-digest",
+								"value": "4244b53ab297a0c855d71af84a3a90781a84fa68",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"applicantReviewed\",\"reviewStatus\": \"completed\",\"reviewResult\":{\"reviewAnswer\": \"GREEN\"},\"externalUserId\":\"fb122e1b-98cf-42f2-b5c5-34f7c863d692\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/webhooks/sumsub",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"webhooks",
+								"sumsub"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook Declined",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-payload-digest",
+								"value": "1cde7fcfd8e426f8b0daa29a93126d514e70f15a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"applicantReviewed\",\"reviewStatus\": \"completed\",\"reviewResult\":{\"reviewAnswer\": \"RED\",\"reviewRejectType\":\"FINAL\"},\"externalUserId\":\"4494f0c8-5be3-4e7d-b23c-5a106fa8054f\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/webhooks/sumsub",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"webhooks",
+								"sumsub"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook rejected",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-payload-digest",
+								"value": "62bb4d45e9e9c2bcf3627ad8710d7bb16941cb3f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"applicantReviewed\",\"reviewStatus\": \"completed\",\"reviewResult.reviewAnswer\":\"RED\",\"reviewResult.reviewRejectType\":\"RETRY\",\"externalUserId\":\"fb122e1b-98cf-42f2-b5c5-34f7c863d692\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/webhooks/sumsub",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"webhooks",
+								"sumsub"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook NEW",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-payload-digest",
+								"value": "501904da969d8d660ce1ba8b10cc61f85ecfe548",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"applicantReset\",\"reviewStatus\": \"init\",\"externalUserId\":\"4494f0c8-5be3-4e7d-b23c-5a106fa8054f\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Url}}/api/v1/webhooks/sumsub",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"webhooks",
+								"sumsub"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "webhook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webhook.site/8da808ec-62a9-47bf-b816-44d362838693",
+							"protocol": "https",
+							"host": [
+								"webhook",
+								"site"
+							],
+							"path": [
+								"8da808ec-62a9-47bf-b816-44d362838693"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://falcone.nl-k8s-stage.srv.local"
+		}
+	]
+}
